@@ -13,14 +13,22 @@
 	src: url(PT_Sans/PTSans-Regular.ttf);
 }
 
+/* HIDE THINGS */
+#la-group {
+	display: none;
+}
+
 /* General */
 body {
-	margin: 0px 10%;
+	margin: 0px 15%;
 	font-family: PTSans, Arial, Helvetica, sans-serif;
 }
 h1 {
 	font-family: PTSerif, serif;
 	font-size: 40px;
+}
+p {
+	text-align: justify;
 }
 
 /* HEADER */
@@ -63,13 +71,25 @@ h1 {
 	margin-top: 3em;
 }
 /* Photos */
+.triple-photo {
+	width: 30%;
+	margin-bottom: 30px;
+	/*min-width: 300px;*/
+}
 .landscape-row {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	flex-wrap: wrap;
 }
 .landscape-photo {
-	width: 40%;
+	width: 45%;
 	margin-bottom: 30px;
 	min-width: 300px;
+}
+.photographer-text {
+	/*margin: 10px 10%;*/
+	margin-bottom: 50px;
+}
+.photo-group {
+	margin-bottom: 60px;
 }
