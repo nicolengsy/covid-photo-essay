@@ -123,6 +123,12 @@ button {
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
+.triple-row {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 0px 15px;
+}
 .landscape-photo {
 	width: 45%;
 	margin-bottom: 30px;
@@ -130,13 +136,11 @@ button {
 }
 .photographer-text {
 	/*margin: 10px 10%;*/
+	margin: 0px 15px;
 	margin-bottom: 50px;
 }
 .photo-group {
 	margin-bottom: 60px;
-}
-.bio {
-	
 }
 
 	/* TESTING */
