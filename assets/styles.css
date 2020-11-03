@@ -63,12 +63,132 @@ p {
 	margin-top: 5px;
 }
 
+/* FANCY BUTTON */
+.buttons-coll {
+  width: 90%;
+  margin: 50px auto;
+  text-align: center;
+}
+button {
+  margin: 20px;
+}
+.custom-btn {
+  padding: 10px 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+.btn-4{
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-4 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-4:before,
+.btn-4:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background: #000;
+  transition: all 0.3s ease;
+}
+.btn-4:before {
+  height: 50%;
+  width: 2px;
+}
+.btn-4:after {
+  width: 20%;
+  height: 2px;
+}
+.btn-4:hover:before {
+  height: 100%;
+}
+.btn-4:hover:after {
+  width: 100%;
+}
+.btn-4 span:before,
+.btn-4 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  background: #000;
+  transition: all 0.3s ease;
+}
+.btn-4 span:before {
+  width: 2px;
+  height: 50%;
+}
+.btn-4 span:after {
+  width: 20%;
+  height: 2px;
+}
+.btn-4 span:hover:before {
+  height: 100%;
+}
+.btn-4 span:hover:after {
+  width: 100%;
+}
+.btn-2 {
+  border: none;
+  border-bottom: 2px solid #000;
+  border-left: 2px solid #000;
+}
+.btn-2:before,
+.btn-2:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background: #000;
+  transition: all 0.3s ease;
+}
+.btn-2:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-2:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-2:hover:before {
+  height: 100%;
+}
+.btn-2:hover:after {
+  width: 100%;
+}
+.btn-1 {
+  border: 2px solid #000;
+}
+.btn-1:hover {
+  background: #000;
+  color: #fff;
+}
+.btn-1:active {
+  top: 2px;
+}
+
 /* Cover photo */
 #cover-photo {
 	width: 100%;
 	height: 500px;
 	background-color: grey;
 	margin-top: 3em;
+	left: 0;
+	z-index: 10001;
 }
 /* Photos */
 .triple-photo {
@@ -92,4 +212,26 @@ p {
 }
 .photo-group {
 	margin-bottom: 60px;
+	
+/* For showing and hiding whole sections */
+.hide {
+  display: none;
+}
+.celineChalk{
+	width: 555.46px;
+	height:642.01px;
+	left:67.54px;
+	top:375.55px;
+}
+.celineMonte{
+	width: 419.78px;
+	height: 272.96px;
+	left: 691.22px;
+	top: 376px;
+}
+.celineStudying{
+	width: 419.71px;
+	height: 272.96px;
+	left: 691.22px;
+	top: 900px;
 }

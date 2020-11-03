@@ -7,7 +7,7 @@
 
 	<!-- TODO: update meta tags -->
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content="Nuestra Voz, Nuestra Historia" />
+	<meta property="og:title" content="Nuestra megan updates, Nuestra Historia" />
 	<meta property="og:description" content="Stories for Latinx students, by Latinx students." />
 	<meta property="og:image" content="https://nicolengsy.github.io/latinx-heritage-month/images/cover/socials-cover.png"/>
 	<meta name="twitter:card" content="summary_large_image">
@@ -35,7 +35,23 @@
 		<p>Nunc vulputate laoreet porta. Cras cursus est vel eros imperdiet, elementum sollicitudin metus facilisis. Maecenas in cursus nunc. Maecenas cursus ex eu velit luctus commodo. Nam iaculis urna faucibus metus facilisis suscipit. Aliquam mollis vehicula ultricies. Nunc suscipit enim felis, vel feugiat risus ullamcorper a. Nam dignissim eget magna vitae bibendum.</p>
 	</section>
 
-	<section class="location-group" id="la-group">
+
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<div class="buttons-coll">
+		<button onclick="showCampus()", class="custom-btn btn-4">Campus</button>
+		<button onclick="showLA()", class="custom-btn btn-2">Los Angeles</button>
+		<button onclick="showPacific()", class="custom-btn btn-1">Pacific and International</button>
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+	<section class="la-photo-group", id="la">
 		<div class="photo-group">
 			<div class="photographer-text">
 				<h1 class="photographer-name">Mia Islas</h1>
@@ -56,6 +72,7 @@
 				<img class="landscape-photo" src="images/miaislas/photo5.jpg"/>
 			</div>
 		</div>
+
 		<div class="photo-group">
 			<div class="photographer-text">
 				<h1 class="photographer-name">Lily Tam</h1>
@@ -157,7 +174,45 @@
 				<img class="landscape-photo" src="images/vincentleo/DSC_8597.jpg"/>
 			</div>
 		</div>
+
 	</section>
+	<section class="campus-photo-group", id="campus">
+		<h1>Celine Vasquez</h1>
+		<p>My name is Celine Vazquez and I’m currently a freshman studying biomedical engineering. Right now I am in Montebello, California - the same place I’ve lived in for the past 18 years. I’m here right now because this is where my family is, and the place that makes the most sense for me to be financially. Ending my senior year of high school during the pandemic was extremely challenging. I had curated this idea of what I thought my senior year would be like - celebrating college acceptances, getting to walk the graduation stage, and saying goodbye to all of my classmates. Things didn’t work out the way I had planned, and I’m now going through my first semester of college online. It’s been an interesting experience, to the say least. Making friends and connections with professors has definitely looked different, but I’m so appreciative of the people I have met virtually so far. I’ve met a great group of friends that support me with chemistry labs and Zoom fatigue. I’m also super lucky my sister lives with me - she also goes to USC, and we’re in some of the same classes, which has been awesome. Although this whole experience has thrown a huge curve ball into what I thought 2020 would look like, it’s taught me to appreciate every day and every person that has come in and out of my life. These pictures showcase the little memories I’ve experienced during this first semester. Although this point in time is “unprecedented,” capturing special moments like these is what gets me through. These photos are a subtle reminder that when something goes terribly wrong, the only thing left to do is face it, and dive headfirst into what life has left to offer.</p>
+		<!-- INSERT PHOTO LAYOUT -->
+		<div class="landscape-row">
+			<img class="celineChalk" src="images/celinevasquez/COVID19chalkart.jpg"/>
+			<img class="celineMonte" src="images/celinevasquez/montebello,CA.jpg"/>
+			<img class="celineStudying" src="images/celinevasquez/sister working (usc student).jpg"/>
+		</div>
+
+	</section>
+	<script>
+		function showLA() {
+  			var x = document.getElementById("la");
+  			if (x.style.display === "none") {
+    			x.style.display = "block";
+  			} else {
+    			x.style.display = "none";
+  			}
+		}
+		function showCampus(){
+			var x = document.getElementById("campus");
+  			if (x.style.display === "none") {
+    			x.style.display = "block";
+  			} else {
+    			x.style.display = "none";
+  			}
+		}
+		function showPacific(){
+			var x = document.getElementById("pac");
+  			if (x.style.display === "none") {
+    			x.style.display = "block";
+  			} else {
+    			x.style.display = "none";
+  			}
+		}
+	</script>
 
 
 	<footer id="footer">	
@@ -170,6 +225,7 @@
 		<span class="yellow-name">KEVIN CAMARGO,</span> Deputy Video Editor<br>
 		<span class="yellow-name">EDUARDO OCAMPO,</span> Podcast Editor<br>
 		<span class="yellow-name">NICOLE NG,</span> Online Projects Editor<br>
+		<span class="yellow-name">MEGAN FRIEDENBERG,</span> Deputy Online Projects Editor<br>
 		<span class="yellow-name">SAMANTHA DENICOLA,</span> Design Director<br><br>
 		© University of Southern California | Daily Trojan 2020. All rights reserved.
 	</footer>
