@@ -206,12 +206,35 @@ button {
 	margin-bottom: 30px;
 	min-width: 300px;
 }
+.mixed-portrait-photo {
+	width: 100%;
+}
+.mixed-landscape-photo {
+	width: 100%;
+}
 .photographer-text {
 	/*margin: 10px 10%;*/
 	margin-bottom: 50px;
 }
 .photo-group {
 	margin-bottom: 60px;
+}
+
+	/* TESTING */
+.column {
+	width: 50%;
+	padding: 0px 15px;
+	box-sizing: border-box;
+}
+.col-photo {
+	width: 100%;
+	padding-bottom: 30px;
+}
+.photo-grid {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
 	
 /* For showing and hiding whole sections */
 .hide {
