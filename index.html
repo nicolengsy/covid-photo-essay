@@ -18,6 +18,66 @@
 	<link rel="stylesheet" href="assets/styles.css">
 	<link rel="icon" type="image/png" href="images/favicon.png"/>
 
+<style>
+
+.table-photo {
+	width: 100%;
+}
+.table-photo-sm {
+	height: 30%;
+	width: auto;
+}
+
+.big-cell {
+	width: 60%;
+}
+.small-cell {
+	/*width: 40%;*/
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.triple-group-left {
+	display: table;
+
+}	
+.col-big {
+	width: 60%;
+	/*flex: 3;*/
+}
+.col-big img {
+	width: 100%;
+}
+.col-small {
+	display: table-cell;
+	/*flex: 2;*/
+	width: 40%;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.col-small img {
+	width: 100%;
+	object-fit: cover;
+}
+.stack-col-photo {
+	width: 100%;
+}
+.column-stack {
+	width: 30%;
+	padding: 0px 15px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.column-big {
+	width: 70%;
+	/*padding: 0px 15px;*/
+	box-sizing: border-box;
+}
+</style>
 
 </head>
 <body>
@@ -64,6 +124,55 @@
 					<img class="col-photo" src="images/celinevasquez/weekendwalk.jpg"/>				
 				</div>
 			</div> 
+
+			<!-- TEST HARDCODE -->
+			<div class="photo-grid">
+				<div class="column-big">
+					<img class="col-photo" src="images/celinevasquez/COVID19chalkart.jpg"/>
+				</div>
+				<div class="column-stack">
+					<img class="stack-col-photo" src="images/celinevasquez/montebelloEdit.png"/>
+					<img class="stack-col-photo" src="images/celinevasquez/sisterworkingEdit.png"/>
+				</div>
+			</div> 
+
+			<!-- TEST FLEX BOX -->
+			<div class="photo-grid">
+				<div class="column-big">
+					<img class="col-photo" src="images/celinevasquez/COVID19chalkart.jpg"/>
+				</div>
+				<div class="column-stack">
+					<img class="stack-col-photo" src="images/celinevasquez/montebelloEdit.png"/>
+					<img class="stack-col-photo" src="images/celinevasquez/sisterworkingEdit.png"/>
+				</div>
+			</div> 
+
+			<!-- tEST TABLES -->
+			<table>
+				<tr>
+					<td class="big-cell">
+						<img class="table-photo" src="images/celinevasquez/COVID19chalkart.jpg"/>
+					</td>
+					<td class="small-cell">
+						hello
+<!-- 						<img class="table-photo-sm" src="images/celinevasquez/takingabreakfromhomework.jpg"/>
+						<img class="table-photo-sm" src="images/celinevasquez/weekendhike.jpg"/>
+ -->					</td>
+				</tr>
+			</table>
+
+
+			<!-- TESTING correct photo grid -->
+			<div class="triple-group-left">
+				<div class="col-big">
+					<img class="" src="images/celinevasquez/COVID19chalkart.jpg"/>
+				</div>
+				<div class="col-small">
+					<img class="" src="images/celinevasquez/takingabreakfromhomework.jpg"/>
+					<img class="" src="images/celinevasquez/weekendhike.jpg"/>
+				</div>
+			</div> 
+
 		</div>
 		<div class="photo-group">
 			<div class="photographer-text">
