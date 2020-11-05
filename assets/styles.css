@@ -22,6 +22,8 @@
 body {
 	margin: 0px 15%;
 	font-family: PTSans, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFE;
+	color: #333533;
 }
 h1 {
 	font-family: PTSerif, serif;
@@ -42,7 +44,7 @@ p {
 	left: 0;
 	line-height: 3em;
 	z-index: 10001;
-	background-color: white;
+	background-color: #FFFFFE;
 }
 #header .logo {
 	color: white;
@@ -95,13 +97,13 @@ button {
 .btn-1 {
   border: 2px solid #000;
 }
+
 .btn-1:hover {
-  background: #000;
+  background: #D1DBD5;
   color: #fff;
+  border-color: #D1DBD5;
 }
-.btn-1:active {
-  /*top: 2px;*/
-}
+
 
 /* Cover photo */
 #cover-photo {
@@ -116,7 +118,6 @@ button {
 .triple-photo {
 	width: 30%;
 	margin-bottom: 30px;
-	/*min-width: 300px;*/
 }
 .landscape-row {
 	display: flex;
@@ -139,11 +140,13 @@ button {
 	margin: 0px 15px;
 	margin-bottom: 50px;
 }
-.photo-group {
-	margin-bottom: 60px;
+/*.photo-group {
+	margin-bottom: px;
+}*/
+.photographer-name {
+	background: linear-gradient(180deg, rgba(255,255,255,0) 65%, #D1DBD5 65%);
+	display: table;
 }
-
-	/* TESTING */
 .column {
 	width: 50%;
 	padding: 0px 15px;
@@ -161,16 +164,20 @@ button {
 .photo-grid .col-photo {
 	padding: 15px 0px;
 }
-	
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
+hr {
+	width: 20%;
+	border-color: rgba(209, 219, 213, .5);
+	/*border-style: dashed;*/
+	margin: 100px auto;
 }
+	
 
 /* FOOTER */
 #footer {
+	font-family: PTSerif, serif;
 	text-align: center;
-	margin-bottom: 40px;
+	margin: 80px 0px;
+}
+#footer-hr {
+	width: 100%;
 }
