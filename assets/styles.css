@@ -19,6 +19,9 @@
 }
 
 /* General */
+html {
+	scroll-behavior: smooth;
+}
 body {
 	margin: 0px 15%;
 	font-family: PTSans, Arial, Helvetica, sans-serif;
@@ -74,7 +77,9 @@ p {
 /* FANCY BUTTON */
 .buttons-coll {
   width: 90%;
-  margin: 80px auto;
+  margin: auto;
+  margin-top: 80px;
+
   text-align: center;
 }
 button {
@@ -169,6 +174,10 @@ hr {
 	border-color: rgba(209, 219, 213, .5);
 	/*border-style: dashed;*/
 	margin: 100px auto;
+}
+#scroll-target {
+	visibility: hidden;
+	margin: 40px auto;
 }
 	
 
