@@ -19,64 +19,76 @@
 	<link rel="icon" type="image/png" href="images/favicon.png"/>
 
 <style>
+	.col-photo {
+		width: 100%;
+		/*padding-bottom: 30px;*/
+	}
+	.triple-landscape {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		padding: 15px 0px;
+	}
+	.col-single {
+		width: 67%;
+		padding: 0px 15px;
+		box-sizing: border-box;
+		display: flex;
+	}
+	.col-stack {
+		width: 33%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 0px 15px;
+		box-sizing: border-box;
+	}
 
-.table-photo {
-	width: 100%;
-}
-.table-photo-sm {
-	height: 30%;
-	width: auto;
-}
+	/* COL WIDTHS */
+	.width-67 {
+		width: 67%;
+	}
+	.width-66 {
+		width: 66%;
+	}
+	.width-65 {
+		width: 65%;
+	}
+	.width-51 {
+		width: 51%;
+	}
+	.width-50 {
+		width: 50%;
+	}
+	.width-49 {
+		width: 49%;
+	}
+	.width-35 {
+		width: 35%;
+	}
+	.width-34 {
+		width: 34%;
+	}
+	.width-33 {
+		width: 33%;
+	}
 
-.big-cell {
-	width: 60%;
-}
-.small-cell {
-	/*width: 40%;*/
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
+	/* MEDIA QUERIES */
+	@media screen and (max-width: 600px) {
+	  .triple-landscape, .triple-portrait, .photo-grid {
+	  	flex-direction: column;
+	  	padding: 0px 15px;
+	  }
+	  .col-single, .col-stack, .triple-photo, .column {
+	  	width: 100%;
+	  	padding: 0px 0px;
+	  }
+	  .col-photo {
+	  	margin: 15px 0px;
+	  }
 
-.triple-group-left {
-	display: table;
+	}
 
-}	
-.col-big {
-	width: 60%;
-	/*flex: 3;*/
-}
-.col-big img {
-	width: 100%;
-}
-.col-small {
-	display: table-cell;
-	/*flex: 2;*/
-	width: 40%;
-	flex-direction: column;
-	justify-content: space-between;
-}
-.col-small img {
-	width: 100%;
-	object-fit: cover;
-}
-.stack-col-photo {
-	width: 100%;
-}
-.column-stack {
-	width: 30%;
-	padding: 0px 15px;
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-.column-big {
-	width: 70%;
-	/*padding: 0px 15px;*/
-	box-sizing: border-box;
-}
 </style>
 
 </head>
@@ -101,9 +113,9 @@
 
 
 	<div class="buttons-coll">
-		<button onclick="togglePhotoGroups()", class="custom-btn btn-1">Campus</button>
-		<button onclick="togglePhotoGroups()", class="custom-btn btn-1">Los Angeles</button>
-		<button onclick="togglePhotoGroups()", class="custom-btn btn-1">Pacific & International</button>
+		<button onclick="togglePhotoGroups()" class="custom-btn btn-1" value="campus">Campus</button>
+		<button onclick="togglePhotoGroups()" class="custom-btn btn-1" value="la">Los Angeles</button>
+		<button onclick="togglePhotoGroups()" class="custom-btn btn-1" value="pac">Pacific & International</button>
 	</div>
 
 	<section class="location-group", id="campus" style="display:block">
@@ -112,66 +124,28 @@
 				<h1 class="photographer-name">Celine Vasquez</h1>
 				<p class="bio">My name is Celine Vazquez and I’m currently a freshman studying biomedical engineering. Right now I am in Montebello, California - the same place I’ve lived in for the past 18 years. I’m here right now because this is where my family is, and the place that makes the most sense for me to be financially. Ending my senior year of high school during the pandemic was extremely challenging. I had curated this idea of what I thought my senior year would be like - celebrating college acceptances, getting to walk the graduation stage, and saying goodbye to all of my classmates. Things didn’t work out the way I had planned, and I’m now going through my first semester of college online. It’s been an interesting experience, to the say least. Making friends and connections with professors has definitely looked different, but I’m so appreciative of the people I have met virtually so far. I’ve met a great group of friends that support me with chemistry labs and Zoom fatigue. I’m also super lucky my sister lives with me - she also goes to USC, and we’re in some of the same classes, which has been awesome. Although this whole experience has thrown a huge curve ball into what I thought 2020 would look like, it’s taught me to appreciate every day and every person that has come in and out of my life. These pictures showcase the little memories I’ve experienced during this first semester. Although this point in time is “unprecedented,” capturing special moments like these is what gets me through. These photos are a subtle reminder that when something goes terribly wrong, the only thing left to do is face it, and dive headfirst into what life has left to offer.</p>			
 			</div>
-			<div class="photo-grid">
-				<div class="column">
+
+			<div class="triple-landscape">
+				<div class="col-single width-65">
 					<img class="col-photo" src="images/celinevasquez/COVID19chalkart.jpg"/>
+				</div>
+				<div class="col-stack width-35">
+					<img class="col-photo" src="images/celinevasquez/montebello.jpg"/>
+					<img class="col-photo" src="images/celinevasquez/sisterworking.jpg"/>
+				</div>
+			</div>
+			<div class="triple-landscape">
+				<div class="col-stack width-34">
 					<img class="col-photo" src="images/celinevasquez/takingabreakfromhomework.jpg"/>
 					<img class="col-photo" src="images/celinevasquez/weekendhike.jpg"/>
 				</div>
-				<div class="column">
-					<img class="col-photo" src="images/celinevasquez/montebello.jpg"/>
-					<img class="col-photo" src="images/celinevasquez/sisterworking.jpg"/>
-					<img class="col-photo" src="images/celinevasquez/weekendwalk.jpg"/>				
+				<div class="col-single width-66">
+					<img class="col-photo" src="images/celinevasquez/weekendwalk.jpg"/>
 				</div>
-			</div> 
-
-			<!-- TEST HARDCODE -->
-			<div class="photo-grid">
-				<div class="column-big">
-					<img class="col-photo" src="images/celinevasquez/COVID19chalkart.jpg"/>
-				</div>
-				<div class="column-stack">
-					<img class="stack-col-photo" src="images/celinevasquez/montebelloEdit.png"/>
-					<img class="stack-col-photo" src="images/celinevasquez/sisterworkingEdit.png"/>
-				</div>
-			</div> 
-
-			<!-- TEST FLEX BOX -->
-			<div class="photo-grid">
-				<div class="column-big">
-					<img class="col-photo" src="images/celinevasquez/COVID19chalkart.jpg"/>
-				</div>
-				<div class="column-stack">
-					<img class="stack-col-photo" src="images/celinevasquez/montebelloEdit.png"/>
-					<img class="stack-col-photo" src="images/celinevasquez/sisterworkingEdit.png"/>
-				</div>
-			</div> 
-
-			<!-- tEST TABLES -->
-			<table>
-				<tr>
-					<td class="big-cell">
-						<img class="table-photo" src="images/celinevasquez/COVID19chalkart.jpg"/>
-					</td>
-					<td class="small-cell">
-						hello
-<!-- 						<img class="table-photo-sm" src="images/celinevasquez/takingabreakfromhomework.jpg"/>
-						<img class="table-photo-sm" src="images/celinevasquez/weekendhike.jpg"/>
- -->					</td>
-				</tr>
-			</table>
+			</div>
 
 
-			<!-- TESTING correct photo grid -->
-			<div class="triple-group-left">
-				<div class="col-big">
-					<img class="" src="images/celinevasquez/COVID19chalkart.jpg"/>
-				</div>
-				<div class="col-small">
-					<img class="" src="images/celinevasquez/takingabreakfromhomework.jpg"/>
-					<img class="" src="images/celinevasquez/weekendhike.jpg"/>
-				</div>
-			</div> 
+
 
 		</div>
 		<div class="photo-group">
@@ -179,59 +153,71 @@
 				<h1 class="photographer-name">Sarah Hendartono</h1>
 				<p class="bio">My name is Sarah Hendartono and I am a freshman majoring in journalism! I’m from around Dallas, TX but I moved out to Los Angeles this semester to get out of my small Texas suburb and have a little bit of independence. With this being my first semester at USC, my college experience looks a lot different than I thought it would. I wouldn’t have imagined that with my first time stepping on campus as a student, it would be almost completely empty. My only perception of campus now is blocked off areas and signs reminding people to practice social distancing. All my classes are online so I usually spend most of my time in my little workspace and having to meet with study groups over Zoom. I at least try not to stay completely cooped up in my apartment by going out to the Village to study, going on walks with my roommate or taking the occasional trip downtown with my friends.</p>			
 			</div>
-			<!-- TODO: incomplete!! -->
-			<div class="photo-grid">
-				<div class="column">
-					<img class="col-photo" src="images/sarahhendartono/campus walk.jpg"/>
-					<img class="col-photo" src="images/sarahhendartono/campus walk.jpg"/>
-					<img class="col-photo" src="images/sarahhendartono/walk_skate.jpg"/>
+
+			<div class="triple-portrait">
+				<img class="triple-photo" src="images/sarahhendartono/campus walk.jpg"/>
+				<img class="triple-photo" src="images/sarahhendartono/campus walk2.jpg"/>
+				<img class="triple-photo" src="images/sarahhendartono/workspace2.jpg"/>
+			</div>
+
+			<div class="triple-landscape">
+				<div class="col-single">
 					<img class="col-photo" src="images/sarahhendartono/walk_skate.jpg"/>
 				</div>
-				<div class="column">
-					<img class="col-photo" src="images/sarahhendartono/campus walk2.jpg"/>
+				<div class="col-stack">
 					<img class="col-photo" src="images/sarahhendartono/zoom study group.png"/>
 					<img class="col-photo" src="images/sarahhendartono/walk past campus.jpg"/>
-					<img class="col-photo" src="images/sarahhendartono/walk past campus.jpg"/>				
 				</div>
-			</div> 
+			</div>
+
 		</div>
 		<div class="photo-group">
 			<div class="photographer-text">
 				<h1 class="photographer-name">Sarah Cortina</h1>
 				<p class="bio">My name is Sarah Cortina, and I’m from the Chicago suburbs. I am a sophomore transfer student. I spent my freshman year abroad in Paris, France, studying at the American University of Paris. As I was part of the Trojan Transfer Plan, I decided to sign an apartment lease early, and signed a lease at University Gateway in winter of 2019. Thus, as I remained tied to my lease, I decided to move to LA and take classes remotely from Gateway. This photo essay shows my weekly routine. During the weekdays, I take my classes, go on runs on campus, go to Trader Joes, and make dinner with my roommates, three girls I met in Paris. On the weekends, I typically do outdoor activities around Los Angeles, such as going to the beach or going to things such as the outdoor Silverlake flea market. It may not be the first semester at USC I pictured, but I’m incredibly grateful to be in Los Angeles and be living with my friends again.</p>			
 			</div>
-			<div class="photo-grid">
-				<div class="column">
-					<img class="col-photo" src="images/sarahcortina/weekend flea market.jpeg"/>
-					<img class="col-photo" src="images/sarahcortina/weekend beach.jpeg"/>
+			<div class="triple-portrait">
+				<img class="triple-photo" src="images/sarahcortina/weekend flea market.jpeg"/>
+				<img class="triple-photo" src="images/sarahcortina/weekend.jpeg"/>
+				<img class="triple-photo" src="images/sarahcortina/weekday run.jpeg"/>
+			</div>
+
+			<div class="triple-landscape">
+				<div class="col-single">
 					<img class="col-photo" src="images/sarahcortina/weekend beach.jpeg"/>
 				</div>
-				<div class="column">
-					<img class="col-photo" src="images/sarahcortina/weekend.jpeg"/>
+				<div class="col-stack">
 					<img class="col-photo" src="images/sarahcortina/weekday dinner.jpeg"/>
 					<img class="col-photo" src="images/sarahcortina/weekday workspace.jpeg"/>
 				</div>
-			</div> 
+			</div>
+
 		</div>
 		<div class="photo-group">
 			<div class="photographer-text">
 				<h1 class="photographer-name">Charlie McCollum</h1>
 				<p class="bio">I’m Charlie McCollum, a sophomore studying film & television production with an English minor. This fall I’m currently living alone by campus. The reason I came here was to continue finding ways to practice my major and find film opportunities outside of school. Though I knew this semester would be different, it certainly has challenged me in ways I didn’t realize back in August. Feelings of repetition and isolation in particular have been the hardest. However, that's not to say the experience has been a negative one. Through the time I’ve spent alone at my place, I’ve learned far more about myself and the world around me. I take far less for granted than I used to. I picked up meditation and prioritized my mental health. I'm improving day by day in the kitchen. I hope my photos capture the feeling of being in a surreal universe during an unprecedented time, along with a glimpse of how I’ve managed to function in this world myself.</p>			
 			</div>
-			<div class="photo-grid">
-				<div class="column">
+			<div class="triple-landscape">
+				<div class="col-single">
 					<img class="col-photo" src="images/charliemccollum/1.jpg"/>
-					<img class="col-photo" src="images/charliemccollum/1.jpg"/>
+				</div>
+				<div class="col-stack">
+					<img class="col-photo" src="images/charliemccollum/2.jpg"/>
+					<img class="col-photo" src="images/charliemccollum/7.jpg"/>
+				</div>
+			</div>
+			<div class="triple-landscape">
+				<div class="col-stack">
 					<img class="col-photo" src="images/charliemccollum/5.jpg"/>
 					<img class="col-photo" src="images/charliemccollum/6.jpg"/>
 				</div>
-				<div class="column">
-					<img class="col-photo" src="images/charliemccollum/2.jpg"/>
-					<img class="col-photo" src="images/charliemccollum/7.jpg"/>
-					<img class="col-photo" src="images/charliemccollum/4.jpg"/>
+				<div class="col-single">
 					<img class="col-photo" src="images/charliemccollum/4.jpg"/>
 				</div>
-			</div> 
+
+			</div>
+
 		</div>
 
 	</section>
@@ -307,41 +293,49 @@
 				<p class="bio">Hello! I’m Kellie, a freshman at USC, currently spending my first semester at home in the Bay Area. I decided to stay home due to the coronavirus and convenience reasons. My photo essay documents my adjustment to an online atmosphere, allowing me to adapt to new creative routines and discovering new outlets. As someone who has the constant desire to translate the daydreams in my head into reality and physical, tangible images, I adapted to new methods of executing photoshoots and allowing my mind to filter endless thoughts out. From finally taking that daunting step in a new direction of taking self-portraits to executing socially distanced photoshoots, to an increased dependence on bullet journaling, I found myself in a new routine. My desk became a space of emerging photoshoot concepts, but also a repetitively mundane, artistically numbing atmosphere. With school consuming the majority of my time, I found myself lacking in painting and sketching, something I used to do constantly. Instead, I channeled that energy into bullet journaling and creating a simple, quick outlet to give structure to my days and clear my head of the overwhelming tasks that exhausted my mind. Although self-portraits may seem like a simple task, it was a big push out of my comfort zone that I would’ve never done if it weren’t for being in quarantine. Setting up makeshift studio spaces within a tight, confined room and also collaborating with other creatives in a safe, distanced environment allowed me to create some of my favorite photos and art pieces.</p>			
 			</div>
 
-			<div class="triple-row">
+			<div class="triple-portrait">
 				<img class="triple-photo" src="images/kelliechen/IMG_1840.jpg"/>
 				<img class="triple-photo" src="images/kelliechen/IMG_1432.jpg"/>
 				<img class="triple-photo" src="images/kelliechen/IMG_1812.jpg"/>
 			</div>
 
-			<div class="photo-grid">
-
-				<div class="column">
+			<div class="triple-landscape">
+				<div class="col-single width-49">
 					<img class="col-photo" src="images/kelliechen/IMG_2275.jpg"/>
 				</div>
-				<div class="column">
+				<div class="col-stack width-51">
 					<img class="col-photo" src="images/kelliechen/IMG_2283.jpg"/>
 					<img class="col-photo" src="images/kelliechen/IMG_2267.jpg"/>
 				</div>
 			</div>
 		</div>
+
 		<div class="photo-group">
 			<div class="photographer-text">
 				<h1 class="photographer-name">Michael Castellanos</h1>
 				<p class="bio">Michael Castellanos is currently a sophomore studying from Las Vegas, Nevada. He had plans of moving to Los Angeles before learning of the campus’ shut down, and decided to stay with his family in Las Vegas. The shut down has brought the family closer, but also made it difficult to have a designated work space. Because of this, a small workstation was set up in the corner of the living room. Las Vegas is most known for its nightlife, and since quarantine began, much of the activity has died down. The Las Vegas Strip has been picking up in volume, but downtown remains nearly lifeless, despite its close proximity to the strip. The picture exhibits the quiet streets of Downtown Las Vegas. The closure of the city's businesses led to the solitude found at Mt. Charleston. A place that ignores the city’s starry lights and offers a feeling of familiarity while also providing the unknown that has yet to be discovered.</p>			
 			</div>
 
+
+			<div class="triple-landscape">
+				<div class="col-single">
+					<img class="col-photo" src="images/michaelcastellanos/DSC02073.jpg"/>
+				</div>
+				<div class="col-stack">
+					<img class="col-photo" src="images/michaelcastellanos/DSC02061.jpg"/>
+					<img class="col-photo" src="images/michaelcastellanos/DSC02060.jpg"/>
+				</div>
+			</div>
 			<div class="photo-grid">
 				<div class="column">
-					<img class="col-photo" src="images/michaelcastellanos/DSC02073.jpg"/>
-					<img class="col-photo" src="images/michaelcastellanos/DSC02073.jpg"/>
 					<img class="col-photo" src="images/michaelcastellanos/DSC02110.jpg"/>
 				</div>
 				<div class="column">
-					<img class="col-photo" src="images/michaelcastellanos/DSC02061.jpg"/>
-					<img class="col-photo" src="images/michaelcastellanos/DSC02060.jpg"/>
 					<img class="col-photo" src="images/michaelcastellanos/DSC01560.jpg"/>
 				</div>
-			</div>
+			</div> 
+
+
 		</div>
 
 		<div class="photo-group">
@@ -350,18 +344,25 @@
 				<p class="bio">Vincent Leo is a junior taking classes at his home in the Bay Area. He chose to stay home as all his classes were online and tensions were rising in the LA area. Vincent’s set of photos are focused on three key components: study space, social interactions and local community. As Vincent set into taking classes at home, he chose to reconfigure the house’s guest bedroom instead of spending all day in the family dining room. His workspace has a cozy vibe and showcases various photos and artwork he’s taken and collected over the years. A benefit of staying home, Vincent now has more time to spend on the basketball court and outdoors with his high school friends. Staying socially distant, the PODS box and the various hiking trails in the Bay Area have filled his weekends. And when he’s not on Zoom for class or his internship, Vincent has been spending time in San Francisco documenting how the pandemic has affected the city’s inner workings. He’s been to some important locations such as the Ferry Building, Salesforce Park, Oracle Arena and Union Square in his attempt to capture COVID-19’s effect on the Bay Area.</p>			
 			</div>
 
-			<div class="photo-grid">
-				<div class="column">
+			<div class="triple-landscape">
+				<div class="col-single width-50">
 					<img class="col-photo" src="images/vincentleo/DSC_8668.jpg"/>
+				</div>
+				<div class="col-stack width-50">
+					<img class="col-photo" src="images/vincentleo/DSC_7040.jpg"/>
+					<img class="col-photo" src="images/vincentleo/DSC_6996.jpg"/>
+				</div>
+			</div>
+			<div class="triple-landscape">
+				<div class="col-stack width-50">
 					<img class="col-photo" src="images/vincentleo/DSC_8665.jpg"/>
 					<img class="col-photo" src="images/vincentleo/DSC_8603.jpg"/>
 				</div>
-				<div class="column">
-					<img class="col-photo" src="images/vincentleo/DSC_7040.jpg"/>
-					<img class="col-photo" src="images/vincentleo/DSC_6996.jpg"/>
+				<div class="col-single width-50">
 					<img class="col-photo" src="images/vincentleo/DSC_8597.jpg"/>
 				</div>
-			</div> 
+
+			</div>
 		</div>
 
 		<div class="photo-group">
@@ -373,20 +374,26 @@
 				<p>Balancing online classes and living on pacific time has been challenging and lonely as I struggle with a harder course load than in-person classes and zoom fatigue.</p>			
 			</div>
 
-			<div class="photo-grid">
-				<div class="column">
+			<div class="triple-landscape">
+				<div class="col-single">
 					<img class="col-photo" src="images/tweshadikshit/IMG_3072.jpg"/>
-					<img class="col-photo" src="images/tweshadikshit/IMG_3072.jpg"/>
+				</div>
+				<div class="col-stack">
+					<img class="col-photo" src="images/tweshadikshit/IMG_4915.jpg"/>
+					<img class="col-photo" src="images/tweshadikshit/IMG_4899.jpg"/>
+				</div>
+			</div>
+			<div class="triple-landscape">
+				<div class="col-stack">
 					<img class="col-photo" src="images/tweshadikshit/IMG_3331.jpg"/>
 					<img class="col-photo" src="images/tweshadikshit/IMG_4840.jpg"/>
 				</div>
-				<div class="column">
-					<img class="col-photo" src="images/tweshadikshit/IMG_4915.jpg"/>
-					<img class="col-photo" src="images/tweshadikshit/IMG_4899.jpg"/>
-					<img class="col-photo" src="images/tweshadikshit/IMG_4946.jpg"/>
+
+				<div class="col-single">
 					<img class="col-photo" src="images/tweshadikshit/IMG_4946.jpg"/>
 				</div>
-			</div> 
+			</div>
+
 		</div>
 
 	</section>
@@ -394,15 +401,16 @@
 	<script>
 		function togglePhotoGroups() {
 			let groups = document.querySelectorAll(".location-group");
+			let show_loc = event.target.value;
 			for (let i = 0; i < groups.length; i++) {
 				let group = groups[i];
-				if (group.style.display === "none") {
-	    			group.style.display = "block";
-	  			} else {
-	    			group.style.display = "none";
-	  			}
+				if (group.id == show_loc) {
+					group.style.display = "block";
+				}
+				else {
+					group.style.display = "none";
+				}
 			}
-			console.log("hello")
 		}
 	</script>
 
@@ -416,7 +424,7 @@
 		<span>Online Projects Deputy Editor: Megan Friedenberg</span><br> -->
 
 		<h3>PRODUCED BY</h3>
-		<span class="masthead-name">VINCENT LEO, JAMES WOLFE, </span> Photo Editors<br>
+		<span class="masthead-name">VINCENT LEO & JAMES WOLFE, </span> Photo Editors<br>
 		<span class="masthead-name">NATHAN ACKERMAN, </span> Associate Managing Editor<br>
 		<span class="masthead-name">LAUREN MATTICE, </span> Digital Managing Editor<br>
 		<span class="masthead-name">NICOLE NG, </span> Online Projects Editor<br>
