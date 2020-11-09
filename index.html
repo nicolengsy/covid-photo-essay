@@ -19,94 +19,38 @@
 	<link rel="icon" type="image/png" href="images/favicon.png"/>
 
 <style>
-	.col-photo {
-		width: 100%;
-		/*padding-bottom: 30px;*/
+	.logo-text {
+		color: rgba(0, 0, 0, 0.75);
+	    font-family: 'Source Sans Pro', serif;
+	    font-weight: bold;
+	    font-size: 1.25em;
+	    letter-spacing: 2px;
+	    margin-top: -2px;
+	    text-decoration: none;
+	    display: inline-block;
 	}
-	.triple-landscape {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		padding: 15px 0px;
-	}
-	.col-single {
-		width: 67%;
-		padding: 0px 15px;
-		box-sizing: border-box;
-		display: flex;
-	}
-	.col-stack {
-		width: 33%;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		padding: 0px 15px;
-		box-sizing: border-box;
-	}
-
-	/* COL WIDTHS */
-	.width-67 {
-		width: 67%;
-	}
-	.width-66 {
-		width: 66%;
-	}
-	.width-65 {
-		width: 65%;
-	}
-	.width-515 {
-		width: 51.5%;
-	}
-	.width-51 {
-		width: 51%;
-	}
-	.width-50 {
-		width: 50%;
-	}
-	.width-49 {
-		width: 49%;
-	}
-	.width-485 {
-		width: 48.5%;
-	}
-	.width-35 {
-		width: 35%;
-	}
-	.width-34 {
-		width: 34%;
-	}
-	.width-33 {
-		width: 33%;
-	}
-
-	/* MEDIA QUERIES */
-	@media screen and (max-width: 600px) {
-	  .triple-landscape, .triple-portrait, .photo-grid {
-	  	flex-direction: column;
-	  	padding: 0px 15px;
-	  }
-	  .col-single, .col-stack, .triple-photo, .column {
-	  	width: 100%;
-	  	padding: 0px 0px;
-	  }
-	  .col-photo {
-	  	margin: 15px 0px;
-	  }
-
-	}
-
 </style>
-
 </head>
 <body>
 	<header id="header">
 		<div class="logo-container">
-			<a href="http://dailytrojan.com/"><img class="logo" src="images/dt_logo.png" alt="Daily Trojan logo"></a>
+			<a href="http://dailytrojan.com/" class="logo-text">
+				DAILY TROJAN
+				<!-- <img class="logo" src="images/dt_logo.png" alt="Daily Trojan logo"> -->
+			</a>
 		</div>
 	</header>
 
-	<div id="cover-photo">
-
+	<div class="cover-section">
+		<div class="cover-photo-container">
+			<img src="images/cover.jpg" class="cover-photo">
+		</div>
+		<div class="cover-title">
+			<div>Physically</div>
+			<div>&nbsp; Restricted,</div>
+			<div>Distantly</div>
+			<div>&nbsp; Connected</div>
+		</div>
 	</div>
 
 	<section id="intro">
@@ -286,16 +230,28 @@
 			<div class="photo-grid">
 				<div class="column">
 					<img class="col-photo" src="images/jameswolfe/3U5A1013.jpg"/>
-					<img class="col-photo" src="images/jameswolfe/3U5A0805.jpg"/>
-					<img class="col-photo" src="images/jameswolfe/3U5A1155.jpg"/>
 				</div>
 
 				<div class="column">
 					<img class="col-photo" src="images/jameswolfe/3U5A0805.jpg"/>
+				</div>
+			</div>
+
+			<div class="triple-landscape">
+				<div class="col-single">
+					<img class="col-photo" src="images/jameswolfe/3U5A0805.jpg"/>
+				</div>
+				<div class="col-stack">
 					<img class="col-photo" src="images/jameswolfe/3U5A1079.jpg"/>
+				</div>
+			</div>
+			<div class="triple-landscape">
+				<div class="col-stack width-37">
+					<img class="col-photo" src="images/jameswolfe/3U5A1155.jpg"/>
+				</div>
+				<div class="col-single width-63">
 					<img class="col-photo" src="images/jameswolfe/3U5A1215.jpg"/>
 				</div>
-
 			</div>
 		</div>
 	</section>
