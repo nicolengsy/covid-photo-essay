@@ -104,9 +104,9 @@ button {
 }
 
 .btn-1:hover {
-  background: #D1DBD5;
+  background: #EFE6DC;
   color: #fff;
-  border-color: #D1DBD5;
+  border-color: #EFE6DC;
 }
 
 
@@ -114,13 +114,13 @@ button {
 .cover-section {
 	padding-top: 5em;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 }
 .cover-photo-container {
 	width: 60%;
-	max-width: 500px;
-	padding: 50px;
+	max-width: 700px;
+	/*padding: 50px;*/
 }
 .cover-photo {
 	width: 100%;
@@ -128,10 +128,12 @@ button {
 .cover-title {
 	font-family: PTSerif;
 	font-weight: bold;
-	font-size: 40px;
+	font-size: 2em;
 	font-style: italic;
 	/*padding-left: 20px;*/
-
+}
+.indent {
+	padding-left: 16px;
 }
 
 /* Photos */
@@ -164,7 +166,7 @@ button {
 	margin-bottom: px;
 }*/
 .photographer-name {
-	background: linear-gradient(180deg, rgba(255,255,255,0) 65%, #D1DBD5 65%);
+	background: linear-gradient(180deg, rgba(255,255,255,0) 65%, #EFE6DC 65%);
 	display: table;
 }
 .column {
@@ -287,5 +289,23 @@ hr {
   .col-photo {
   	margin: 15px 0px;
   }
-
+  .cover-section {
+  	flex-direction: column;
+  }
+  .cover-title {
+  	margin-top: 60px;
+  }
+  .cover-photo-container {
+  	width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cover-title {
+  	font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 1230px) {
+  .cover-section {
+  	justify-content: space-evenly;
+  }
 }
