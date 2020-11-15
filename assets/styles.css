@@ -190,7 +190,7 @@ button {
 }
 hr {
 	width: 20%;
-	border-color: rgba(209, 219, 213, .5);
+	border-color: rgba(239, 230, 220, 0.5);
 	/*border-style: dashed;*/
 	margin: 100px auto;
 }
