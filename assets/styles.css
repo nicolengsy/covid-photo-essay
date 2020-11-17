@@ -49,23 +49,15 @@ p {
 	z-index: 10001;
 	background-color: #FFFFFE;
 }
-#header .logo {
-	color: white;
-	font-family: 'Source Sans Pro', serif;
-	font-weight: bold;
-	font-size: 1.25em;
-	letter-spacing: 2px;
-	text-decoration: none;
-	text-align: center;
-}
+
 .logo-container {
-	/*width: 130px;*/
+	width: 130px;
 	margin: auto;
-	/*margin-top: 2px;*/
+	margin-top: 2px;
 }
 .logo {
 	width: 100%;
-	margin-top: 5px;
+	margin-top: 6px;
 }
 
 /* INTRO */
@@ -229,7 +221,6 @@ hr {
 	padding: 0px 15px;
 	box-sizing: border-box;
 	display: flex;
-	align-items: flex-start;
 }
 .col-stack {
 	width: 33%;
@@ -280,6 +271,19 @@ hr {
 }
 .width-33 {
 	width: 33%;
+}
+
+.back-to-top-container {
+	text-align: center;
+	margin-top: 50px;
+}
+.back-to-top-container a, #usc a{
+	font-family: PTSerif, serif;
+	color: #CCA795;
+}
+
+#usc, #usc a {
+	color: #CCA795;
 }
 
 /* MEDIA QUERIES */
