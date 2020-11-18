@@ -221,6 +221,7 @@ hr {
 	padding: 0px 15px;
 	box-sizing: border-box;
 	display: flex;
+	align-items: flex-start;
 }
 .col-stack {
 	width: 33%;
@@ -233,6 +234,9 @@ hr {
 }
 
 /* COL WIDTHS */
+.width-68 {
+	width: 68%;
+}
 .width-67 {
 	width: 67%;
 }
@@ -241,6 +245,9 @@ hr {
 }
 .width-65 {
 	width: 65%;
+}
+.width-64 {
+	width: 64%;
 }
 .width-63 {
 	width: 63%;
@@ -263,6 +270,9 @@ hr {
 .width-37 {
 	width: 37%;
 }
+.width-36 {
+	width: 36%;
+}
 .width-35 {
 	width: 35%;
 }
@@ -271,6 +281,9 @@ hr {
 }
 .width-33 {
 	width: 33%;
+}
+.width-32 {
+	width: 32%;
 }
 
 .back-to-top-container {
